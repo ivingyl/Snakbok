@@ -1,0 +1,54 @@
+<!doctype>
+<html>
+<head>
+  <link href="admin_feedbackpanel.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="logo">
+                <img src="images/logo.png" style="margin:20px; border-radius: 50%; width: auto;">
+            </div>
+        <div class="a1">
+            <ul>
+            <li>Username</li>
+            <li><button type="button" id="btn1" onclick=window.open("myhomepage.html","_self") class="cancelbtn">Logout</button></li>
+          </ul>
+        </div>
+    </header>
+        <div class="split left">
+            <div class="centered">
+                <img src="images/faculty1.png" alt="user">
+                <h2>Username</h2>
+                <br>
+                <br>
+                <ul class="side-nav">
+                    <div class="hov"><li><a href="admin.html">HOME</a></li></div>
+                    <div class="hov"><li><a href="">CHAT BOX</a></li></div>
+                    <div class="hov"><li><a href="admin_compinfo.html">COMPANY INFORMATION</a></li></div>
+                    <div class="hov"><li><a href="admin_feedbackpanel.html">FEEDBACK PANEL</a></li></div>
+                    <div class="hov"><li><a href="admin_messages.html">MESSAGES</a></li></div>
+                </div>
+                </div>
+                <br>
+                <div class="" style="margin-left:800px; font-size:150%;">
+                  <h3>CHAT BOX</h3>
+                </div>
+              <br>
+                <div class="container" methord="post" enctype="text/plain">
+                  <form action="/action_page.php">
+                    <center><textarea id="message" name="message" placeholder="Error! Unable to show message" style="height:200px" readonly></textarea><br></center>
+
+                    <table><tr>
+                      <td><button type="button" class="cbtn" style="margin-left: 350px;">Select</button></td>
+                      <td><input type="submit" value="Reply"></td>
+                      <td><button type="button" class="cbtn">Delete</button></button></td>
+                      <td><button type="button" class="cbtn">Block</button></button></td>
+
+                   </table></tr>
+                </form>
+                </div>
+
+
+</body>
+</html>
