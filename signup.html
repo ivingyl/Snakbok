@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  z-index: 20;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+    
+
+}
+
+input[type="radio"]:checked + label{
+  background-color: #58BA83;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div id="id05" class="modal">
+  <div class="imgcontainer">
+    <span onclick=window.open("myhomepage.html","_self") class="close" title="Close Modal">&times;</span>
+  </div>
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="univ-roll"><b>University Roll No.</b></label>
+    <input type="text" placeholder="University Roll No." name="Univ-roll" required>
+    <br>
+    <br>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Name" name="name" required>
+    <br>
+    <br>
+    <label for="mob-no"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Mobile Number" name="mob-no" required>
+    <br>
+    <br>
+    <label for="gender"><b>Gender</b></label>
+    <table>
+    <form action="/action_page.php">
+      <tr>
+        <td><input type="radio" name="gender" id="male" value="male"></td>
+        <td><label for="male">Male</label></td>
+        <td><input type="radio" name="gender" id="female" value="female"></td>
+         <td><label for="female">Female</label></td>
+         <td><input type="radio" name="gender" id="other" value="other"></td>
+        <td><label for="other">Other</label></td></tr>
+    </form>
+  </table>
+  <br>
+  <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+
+<form class="" action="myhomepage.html" method="post">
+
+  <p>
+               <strong><label>Choose Course</label></strong>
+               <select id = "myList">
+                 <option value = "1">B.Tech</option>
+                 <option value = "2">BBA</option>
+                 <option value = "3">BCA</option>
+                 <option value = "4">B.Sc</option>
+                   <option value = "5">Diploma Engineering</option>
+                   <option value = "6">M.Tech</option>
+                   <option value = "7">MBA</option>
+                   <option value = "8">MCA</option>
+               </select>
+            </p>
+        <br>     <p>
+                 <strong><label>Choose Branch</label></strong>
+                 <select id = "mylist">
+                   <option value = "1">CS</option>
+                     <option value = "2">EC</option>
+                      <option value = "3">EE</option>
+                       <option value = "4">EN</option>
+                          <option value ="5">ME</option>
+                          <option value = "6">ES</option>
+                          <option value = "7">Civil</option>
+                          <option value = "8">Biotech</option>
+
+                 </select>
+             </p>
+          <br>   <p>
+                 <strong><label> Choose Year</label></strong>
+             <select id="mylist">
+                   <option value = "1">1</option>
+                      <option value = "2">2</option>
+                             <option value = "3">3</option>
+                         <option value = "4">4</option>
+
+
+
+
+                 </select>
+             </p>
+
+</form>
+
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href=myhomepage.html>Sign in</a>.</p>
+  </div>
+</div>
+</form>
+<script>
+var modal=document.getElementById('id05');
+window.onclick=function(event){
+  if (event.target==modal){
+    modal.style.display="none";
+  }
+}
+</script>
+</body>
+</html>
